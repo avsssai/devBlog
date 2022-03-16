@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Button from '../components/Button';
 import Header from '../components/Header';
 import HomePage from '../components/HomePage';
 

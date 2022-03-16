@@ -61,7 +61,8 @@ const Row = styled.div`
   display: flex;
   font-size: 5rem;
   font-weight: 900;
-  line-height: 5.5rem;
+  line-height: 4rem;
+  letter-spacing: 0.1rem;
   justify-content: flex-end;
 `;
 const Intro = styled.span`
