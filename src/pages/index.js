@@ -1,18 +1,21 @@
 import styled from 'styled-components';
 import Button from '../components/Button';
+import Header from '../components/Header';
+import HomePage from '../components/HomePage';
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: 'black';
+const Wrapper = styled.div`
+  height: 100%;
+  min-height: 100vh;
+  margin: 0 1rem;
 `;
-
-const Wrapper = styled.div``;
 
 export default function Home() {
   return (
-    <Wrapper>
-      <Title>My page</Title>
-      <Button>toggle</Button>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Header />
+        <HomePage />
+      </Wrapper>
+    </>
   );
 }

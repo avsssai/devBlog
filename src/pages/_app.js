@@ -1,5 +1,6 @@
-import { createGlobalStyle } from "styled-components";
-import { DarkModeProvider } from "../hooks/useDarkMode";
+import { createGlobalStyle } from 'styled-components';
+import { DarkModeProvider } from '../hooks/useDarkMode';
+// const fontSecondary = 'Merriweather', serif;
 const GlobalStyle = createGlobalStyle`
  /*
   1. Use a more-intuitive box-sizing model.
@@ -18,6 +19,11 @@ const GlobalStyle = createGlobalStyle`
 */
 html, body {
   height: 100%;
+  font-family:'Rubik', sans-serif;
+}
+:root {
+  --font-primary:'Rubik', sans-serif;
+  --font-secondary:'Merriweather', serif;
 }
 /*
   Typographic tweaks!
@@ -27,6 +33,8 @@ html, body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  transition: 0.2s background;
+  background: var(--color-background);
 }
 /*
   6. Improve media defaults
@@ -56,12 +64,12 @@ p, h1, h2, h3, h4, h5, h6 {
 `;
 
 export default function App({ Component, pageProps }) {
-	return (
-		<>
-			<GlobalStyle />
-			<DarkModeProvider>
-				<Component {...pageProps} />
-			</DarkModeProvider>
-		</>
-	);
+  return (
+    <>
+      <GlobalStyle />
+      <DarkModeProvider>
+        <Component {...pageProps} />
+      </DarkModeProvider>
+    </>
+  );
 }

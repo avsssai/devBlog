@@ -1,11 +1,25 @@
 export const COLORS = {
-	primary: "#087392",
-	primaryDark: "#05566e",
-	background: { dark: "#1B1B1B", light: "#EEE" },
-	box: { dark: "#333", light: "#FFF" },
-	border: { dark: "#2b2b2b", light: "#dfdfdf" },
-	textPrimary: { dark: "#FFF", light: "#4F4F4F" },
+  primary: {
+    light: '#FFE68F',
+    dark: '#514E44'
+  },
+  secondary: {
+    light: '#FFEBA8',
+    dark: '#77756D'
+  },
+  textPrimary: {
+    light: '#000000',
+    dark: '#FFFFFF'
+  },
+  textSecondary: {
+    light: '#77756D',
+    dark: '#CCCCCC'
+  },
+  background: {
+    light: '#FFE68F',
+    dark: '#514E44'
+  }
 };
 
-export const COLOR_MODE_KEY = "color-mode";
-export const INITIAL_COLOR_MODE_CSS_PROP = "--initial-color-mode";
+export const COLOR_MODE_KEY = 'color-mode';
+export const INITIAL_COLOR_MODE_CSS_PROP = '--initial-color-mode';

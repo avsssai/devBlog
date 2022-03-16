@@ -12,4 +12,6 @@ export default function Button({ children }) {
 const ButtonComponent = styled.button`
   padding: 10px;
   font-size: 1.25rem;
+  color: var(--color-textPrimary);
+  background: var(--color-background);
 `;

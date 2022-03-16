@@ -43,7 +43,7 @@ export function FallBackStyles() {
   const cssVariableString = Object.entries(COLORS)
     .map(([name, value]) => {
       const color = typeof value === 'object' ? value.light : value;
-      return `--${name}: ${color};`;
+      return `--color-${name}: ${color};`;
     })
     .join('\n');
 
