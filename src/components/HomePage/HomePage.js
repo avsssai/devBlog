@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ArrowDown } from 'react-feather';
+import { ArrowDown, MapPin } from 'react-feather';
 const HomePage = () => {
   return (
     <Wrapper>
@@ -10,22 +10,41 @@ const HomePage = () => {
           Siva
         </Row>
 
-        <Row>Sesha</Row>
-        <Row>Sai</Row>
+        <Row
+          style={{
+            color: 'var(--color-accentPink)'
+          }}
+        >
+          Sesha
+        </Row>
+        <Row
+          style={{
+            color: 'var(--color-accentYellow)'
+          }}
+        >
+          Sai
+        </Row>
       </Name>
-      <Work>I design, develop and deploy web applications.</Work>
+      <Work>
+        Full-stack developer mastering the art of building{' '}
+        <HighlightPink>visually stunning</HighlightPink> and{' '}
+        <HighlightYellow>accessible</HighlightYellow> websites.
+      </Work>
+      <Location>
+        <MapPin /> <Text>Hyderabad</Text>
+      </Location>
       <HomeButtons>
         <Button>gitHub</Button>
         <Button>twitter</Button>
       </HomeButtons>
-      <BottomNavContent>
+      {/* <BottomNavContent>
         <ArrowDown size={48} />
         <Navs>
           <Nav>about</Nav>
           <Nav>contact</Nav>
           <Nav>work</Nav>
         </Navs>
-      </BottomNavContent>
+      </BottomNavContent> */}
     </Wrapper>
   );
 };
@@ -33,17 +52,20 @@ const HomePage = () => {
 const Wrapper = styled.div`
   margin: 2rem 0;
   color: var(--color-textPrimary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Row = styled.div`
   display: flex;
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: 900;
-  line-height: 6rem;
+  line-height: 5.5rem;
   justify-content: flex-end;
 `;
 const Intro = styled.span`
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-right: 1rem;
   font-weight: 600;
   line-height: 4rem;
@@ -52,46 +74,57 @@ const Intro = styled.span`
 
 const Name = styled.div`
   width: fit-content;
-  margin: 0 auto;
 `;
 
 const Work = styled.div`
-  font-size: 1.5rem;
-  margin-top: 2rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--color-textSecondary);
   text-align: center;
+  padding: 8px;
+  margin: 2rem 0;
 `;
 
 const HomeButtons = styled.div`
   display: flex;
   gap: 2rem;
-  justify-content: center;
-  margin-top: 2rem;
+
+  justify-content: space-evenly;
 `;
 const Button = styled.div`
   border: 2px solid var(--color-textPrimary);
-  padding: 1rem 2rem;
+  padding: 0.75rem;
   background: var(--color-background);
   color: var(--color-textPrimary);
   font-weight: 900;
-  font-size: 1.25rem;
+  font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
 `;
 
+const HighlightYellow = styled.span`
+  color: var(--color-accentYellowDark);
+`;
+const HighlightPink = styled.span`
+  color: var(--color-accentPink);
+`;
 const BottomNavContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 3rem 2rem;
 `;
 const Navs = styled.ul`
   list-style: none;
 `;
 const Nav = styled.li`
-  margin: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
 `;
+const Location = styled.div`
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-weight: 900;
+`;
+const Text = styled.span``;
 export default HomePage;

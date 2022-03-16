@@ -1,6 +1,6 @@
 export const COLORS = {
   primary: {
-    light: '#FFE68F',
+    light: '#FFFFFF',
     dark: '#514E44'
   },
   secondary: {
@@ -16,9 +16,12 @@ export const COLORS = {
     dark: '#CCCCCC'
   },
   background: {
-    light: '#FFE68F',
+    light: '#FFFFFF',
     dark: '#514E44'
-  }
+  },
+  accentPink: '#F472B6',
+  accentYellow: '#FFE68F',
+  accentYellowDark: '#FECA14'
 };
 
 export const COLOR_MODE_KEY = 'color-mode';
