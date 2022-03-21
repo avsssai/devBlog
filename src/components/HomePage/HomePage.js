@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ArrowDown, MapPin } from 'react-feather';
+import { MapPin } from 'react-feather';
 const HomePage = () => {
   return (
     <Wrapper>
@@ -31,12 +31,15 @@ const HomePage = () => {
         <HighlightYellow>accessible</HighlightYellow> websites.
       </Work>
       <Location>
-        <MapPin /> <Text>Hyderabad</Text>
+        <MapPin /> <Text>Hyderabad, IN</Text>
       </Location>
       <HomeButtons>
         <Button>gitHub</Button>
         <Button>twitter</Button>
       </HomeButtons>
+      {/* <StuffILikeData>
+        <Header3>Currently in love </Header3>
+      </StuffILikeData> */}
       {/* <BottomNavContent>
         <ArrowDown size={48} />
         <Navs>
@@ -49,12 +52,31 @@ const HomePage = () => {
   );
 };
 
+const MainWrapper = styled.div`
+  @media (min-width: 1100px) {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+  }
+`;
+
 const Wrapper = styled.div`
   margin: 2rem 0;
   color: var(--color-textPrimary);
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (min-width: 1100px) {
+    /* align-items: flex-start; */
+    /* width: 60%; */
+    height: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 `;
 
 const Row = styled.div`
@@ -64,6 +86,10 @@ const Row = styled.div`
   line-height: 4rem;
   letter-spacing: 0.1rem;
   justify-content: flex-end;
+  @media (min-width: 1100px) {
+    font-size: 8rem;
+    line-height: 7rem;
+  }
 `;
 const Intro = styled.span`
   font-size: 1rem;
@@ -78,12 +104,18 @@ const Name = styled.div`
 `;
 
 const Work = styled.div`
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--color-textSecondary);
   text-align: center;
-  padding: 8px;
+  padding: 8px 0;
   margin: 2rem 0;
+  width: 350px;
+
+  @media (min-width: 1100px) {
+    text-align: revert;
+    width: 50%;
+  }
 `;
 
 const HomeButtons = styled.div`
@@ -102,7 +134,8 @@ const Button = styled.div`
   cursor: pointer;
   border-radius: 5px;
 `;
-
+const Header3 = styled.h3``;
+const StuffILikeData = styled.div``;
 const HighlightYellow = styled.span`
   color: var(--color-accentYellowDark);
 `;
@@ -126,6 +159,10 @@ const Location = styled.div`
   gap: 1rem;
   margin-bottom: 2rem;
   font-weight: 900;
+  @media (min-width: 1100px) {
+    margin-bottom: 4rem;
+  }
 `;
 const Text = styled.span``;
+
 export default HomePage;
