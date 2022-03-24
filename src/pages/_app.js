@@ -19,11 +19,11 @@ const GlobalStyle = createGlobalStyle`
 */
 html, body {
   height: 100%;
-  font-family:'Rubik', sans-serif;
+  font-family:'Montserrat', sans-serif;
 }
 :root {
-  --font-primary:'Rubik', sans-serif;
-  --font-secondary:'Merriweather', serif;
+  --font-primary:'Montserrat', sans-serif;
+  --font-secondary: 'Space Mono', monospace;
 }
 /*
   Typographic tweaks!

@@ -17,7 +17,7 @@ export default class MyDocument extends Document {
             crossOrigin="true"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Rubik:wght@400;500;700;900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
             rel="stylesheet"
           />
           <FallBackStyles />

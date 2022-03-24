@@ -3,21 +3,18 @@ export const COLORS = {
     light: '#FFFFFF',
     dark: '#514E44'
   },
-  secondary: {
-    light: '#FFEBA8',
-    dark: '#77756D'
-  },
+
   textPrimary: {
     light: '#000000',
     dark: '#FFFFFF'
   },
   textSecondary: {
-    light: '#77756D',
-    dark: '#CCCCCC'
+    light: '#4B5563',
+    dark: '#FCDDEC'
   },
   background: {
-    light: '#FFFFFF',
-    dark: '#514E44'
+    light: '#E9ECEF',
+    dark: '#1E293B'
   },
   accentPink: '#F472B6',
   accentYellow: '#FFE68F',
